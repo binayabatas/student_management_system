@@ -12,10 +12,11 @@ import UserRegistrationForm from './pages/UserRegistrationForm';
 import StudentList from './pages/StudentList';
 import ViewSingleStudent from './pages/ViewSingleStudent';
 import InvoicePage from './pages/InvoicePage';
+import EditStudentForm from './pages/EditStudentForm';
 
 const App = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#F7F7FA', minHeight: '100vh'}}>
+    <div style={{ boxSizing: 'border-box', width: '100%', display: 'flex', justifyContent: 'center', backgroundColor: '#F7F7FA', minHeight: '100vh'}}>
       <Router>
         <Routes>
           <Route
@@ -47,6 +48,11 @@ const App = () => {
             path="/invoice"
             exact
             element={<InvoicePage />}
+          />
+          <Route
+            path="/edit/:id"
+            exact
+            element={<EditStudentForm />}
           />
         </Routes>
       </Router>
